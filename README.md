@@ -194,6 +194,29 @@ By default this writes:
 
 The generated nav is added under the top-level `API Reference` dropdown as `Canton Protobuf History`, with only the overview page listed in nav. The per-endpoint pages are generated and linked from the overview page but left unlisted.
 
+### Generate the latest protocol markdown export
+
+This repo also includes a local markdown export step for the latest checked-in protocol protobuf reference pages under `docs-main/reference/protobuf/packages/*protocol*.mdx`.
+The generator extracts one `.md` page per protobuf source file, writes a shared markdown contents page, rewrites protocol-internal type links to the extracted markdown pages, and adds the entry point under `API Reference -> Ledger API -> Protobufs`.
+
+Run:
+
+```bash
+python3 scripts/generate_latest_protocol_markdown.py
+```
+
+or:
+
+```bash
+npm run generate:latest-protocol-markdown
+```
+
+By default this writes:
+
+- `docs-main/reference/protocol/latest/contents.md`
+- `docs-main/reference/protocol/latest/**`
+- `docs-main/docs.json`
+
 ### Generate the gRPC Ledger API reference
 
 This repo also includes a checked-in source config for the Ledger API gRPC protobuf surface at `config/x2mdx/grpc-ledger-api-reference/source-artifacts.json`.
