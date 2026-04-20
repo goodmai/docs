@@ -855,7 +855,13 @@
               {
                 "group": "Protobufs",
                 "pages": [
-                  "reference/protobuf/index"
+                  "reference/protobuf/index",
+                  {
+                    "group": "Latest Protocol Markdown",
+                    "pages": [
+                      "reference/protocol/latest/contents"
+                    ]
+                  }
                 ]
               },
               {

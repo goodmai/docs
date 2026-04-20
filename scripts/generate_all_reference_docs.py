@@ -11,6 +11,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATHS = [
+    REPO_ROOT / "scripts" / "generate_latest_protocol_markdown.py",
     REPO_ROOT / "scripts" / "generate_json_api_reference.py",
     REPO_ROOT / "scripts" / "generate_json_api_asyncapi_reference.py",
     REPO_ROOT / "scripts" / "generate_grpc_ledger_api_reference.py",
